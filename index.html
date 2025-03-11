@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=320, height=480, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arturo ❤️ Antonella</title>
     <style>
         body {
@@ -43,29 +43,31 @@
 </head>
 <body>
     <div class="container">
-        <h1>❤️ Arturo & Antonella 14/12/2024 ❤️</h1>
+        <h1>❤️ Arturo & Antonella ❤️</h1>
         <div class="slider">
             <div class="slides">
                 <img src="299_MAG_3250.JPG" alt="Boda de Arturo y Antonella">
                 <img src="420_MAG_3390.jpg" alt="Otra foto de la boda">
                 <img src="437_MAG_3409.jpg" alt="Momentos especiales">
-                <img src="121_MAG_3046.jpg" alt="Felices juntos">
+                <img src="121_MAG_3046.JPG" alt="Felices juntos">
             </div>
         </div>
-        <p style="font-size: 30px; color: white; text-shadow: 2px 2px 5px black;">💖 Te amo fuerte 💖</p>
+        <p style="font-size: 30px; color: white; text-shadow: 2px 2px 5px black;">💖 Para siempre juntos 💖</p>
     </div>
     <script>
         let index = 0;
+        const slides = document.querySelector(".slides");
+        const totalSlides = document.querySelectorAll(".slides img").length;
+
         function slideShow() {
-            let slides = document.querySelector(".slides");
-            let totalSlides = document.querySelectorAll(".slides img").length;
             index++;
-            if (index === totalSlides) {
+            if (index >= totalSlides) {
                 index = 0;
             }
             slides.style.transform = `translateX(${-index * 320}px)`;
         }
-        setInterval(slideShow, 4000); // Cambia cada 1,5 segundos
+        
+        setInterval(slideShow, 4000); // Cambia cada 4 segundos
     </script>
 </body>
 </html>
